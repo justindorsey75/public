@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-files = os.listdir(r"c:\users\justi\downloads")
+local = os.environ['userprofile']
+files = os.listdir(os.path.join(local, 'downloads'))
 srs = pd.Series(files)
-sl = srs.loc[0]
-print(sl)
+data = srs.loc[0:1]
